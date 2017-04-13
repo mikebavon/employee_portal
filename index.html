@@ -21,6 +21,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="assets/js/login.js"></script>
 </head>
 <body>
     <!-- HEADER END-->
@@ -55,12 +56,18 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                     <label>Enter Email ID : </label>
-                        <input type="text" class="form-control" />
+                    <span id="loginError"></span><br>
+                    <form id="login" name="login" autocomplete="off" method="post">
+
+                        <label>Enter Email ID : </label>
+                            <input type="text" class="form-control" name="username" id="username" />
                         <label>Enter Password :  </label>
-                        <input type="password" class="form-control" />
-                        <hr />
-                        <a href="home.html" class="btn btn-info"><span class="glyphicon glyphicon-user"></span> &nbsp;Log Me In </a>&nbsp;
+                            <input type="password" class="form-control" name="password" id="password" />
+                            <hr />
+                            <a onclick="signIn();" href="#" class="btn btn-info"><span class="glyphicon glyphicon-user"></span> &nbsp;Log Me In </a>&nbsp;
+
+                    </form>
+
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-info">
